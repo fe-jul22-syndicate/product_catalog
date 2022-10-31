@@ -1,10 +1,10 @@
-@import "./utils/fonts";
-@import "./utils/reset";
-@import "./utils/vars";
-@import "./utils/mixins";
+@import './utils/fonts';
+@import './utils/reset';
+@import './utils/vars';
+@import './utils/mixins';
 
 html {
-  font-family: "Mont", sans-serif;
+  font-family: 'Mont', sans-serif;
   background-color: $color-bg;
   color: $color-text-white;
 }
