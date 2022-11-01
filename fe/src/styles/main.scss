@@ -2,6 +2,9 @@
 @import './utils/reset';
 @import './utils/vars';
 @import './utils/mixins';
+@import './container.scss';
+@import './grid.scss';
+
 
 html {
   font-family: 'Mont', sans-serif;
