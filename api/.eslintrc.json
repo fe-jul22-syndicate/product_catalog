@@ -11,5 +11,8 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint"],
-  "rules": {}
+  "rules": {
+    "semi": ["error", "always"],
+    "@typescript-eslint/semi": ["error", "always"]
+  }
 }
