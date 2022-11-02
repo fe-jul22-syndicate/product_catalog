@@ -1,0 +1,110 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px;
+  gap: 8px;
+
+  width: 272px;
+  height: 506px;
+  left: 16px;
+  top: 16px;
+
+
+  background: #161827;
+}
+
+.card__img {
+  height: 196px;
+  width: 208px;
+  left: 32px;
+  top: 32px;
+  border-radius: 0px;
+
+}
+
+.card__imgProduct {
+  height: 196px;
+}
+
+.card__title {
+  width: 208px;
+  height: 42px;
+  
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  
+  color: #f1f2f9;
+}
+
+.card__price {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 8px 0;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__priceTeg {
+  width: 50px;
+  height: 31px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+ 
+  color: #f1f2f9;
+}
+
+.card__priceTegSale {
+  width: 50px;
+  height: 31px;
+  padding-left: 8px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+ 
+  color: #75767F;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+}
+
+.card__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  width: 160px;
+  height: 40px;
+
+  background: #905BFF;
+}
+
+.card__btnFavourite {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  height: 40px;
+  width: 40px;
+  
+  border-radius: 0px;
+
+  background: #323542;
+}
+
+.pusto {
+  height: 110px;
+}
