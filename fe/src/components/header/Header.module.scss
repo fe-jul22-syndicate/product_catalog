@@ -1,0 +1,147 @@
+@use "../../styles/utils/mixins" as mixins;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+
+  margin-bottom: 24px;
+  height: 48px;
+  width: 100%;
+
+  box-shadow: 0px 1px 0px 0px #323542;
+
+  @include mixins.onTable {
+    margin-bottom: 32px;
+  }
+
+  @include mixins.onDesktop {
+    margin-bottom: 56px;
+    height: 64px;
+  }
+
+  &_logo {
+    display: flex;
+    background-image: url(./imagesHeader/logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 16px 13px;
+
+    height: 23px;
+    width: 64px;
+
+    @include mixins.onDesktop {
+      height: 29px;
+      width: 80px;
+    }
+  }
+
+  &_burger {
+    padding: 20px;
+
+    border-left: 1px solid #3B3E4A;
+
+    @include mixins.onTable {
+      display: none;
+    }
+
+    @include mixins.onDesktop {
+      display: none;
+    }
+
+    &_menu {
+      display: flex;
+      background-image: url(./imagesHeader/burger.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+
+      height: 8.5px;
+      width: 14px;
+    }
+  }
+
+  &_favorites {
+    &::after {
+      content: url("./imagesHeader/favorites.svg");
+      margin: auto;
+      position: absolute;
+      top: 40%; 
+      left: 18%;
+    }
+  }
+
+  &_shopping_basket {
+    &::after {
+      content: url("./imagesHeader/basket.svg");
+      margin: auto;
+      position: absolute;
+      top: 40%; 
+      right: 18%;
+    }
+  }
+}
+
+.nav {
+  display: none;
+  margin-left: 48px;
+
+  @include mixins.onTable {
+    display: flex;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &_item {
+    list-style: none;
+    margin-right: 64px;
+    color: #75767F;
+  }
+
+  &_link {
+    color: #75767F;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 11px;
+  }
+}
+
+.left_wrapper {
+  display: flex;
+}
+
+.right_wrapper {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  &_box {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    border-left: 1px solid #3B3E4A;
+
+    height: 48px;
+    width: 48px;
+
+    @include mixins.onTable {
+      display: flex;
+    }
+
+    @include mixins.onDesktop {
+      width: 64px;
+      height: 64px;
+    }
+  }
+}
