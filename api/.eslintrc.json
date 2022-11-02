@@ -3,7 +3,7 @@
     "node": true,
     "es2021": true
   },
-  "extends": "standard-with-typescript",
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
   "overrides": [],
   "parserOptions": {
     "project": "tsconfig.json",
