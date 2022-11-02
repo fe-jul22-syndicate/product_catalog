@@ -1,0 +1,42 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(32px, 1fr));
+  column-gap: 16px;
+
+  @include onTable {
+    grid-template-columns: repeat(12, minmax(32px, 1fr));
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(24, minmax(32px, 1fr));
+  }
+
+  &__item {
+    @for $start from 1 through 24 {
+      @for $end from $start  through 24 {
+        &--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+
+        &--table--#{$start}-#{$end} {
+          @include onTable {
+            grid-column: #{$start} / #{$end + 1};
+          }
+        }
+      }
+
+      & {
+        @for $start from 1 through 24 {
+          @for $end from $start  through 24 {
+
+            &--desktop--#{$start}-#{$end} {
+              @include onDesktop {
+                grid-column: #{$start} / #{$end + 1};
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
