@@ -1,0 +1,156 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  padding: 32px;
+  gap: 8px;
+  margin: 50px;
+
+  width: 272px;
+  height: 506px;
+  left: 16px;
+  top: 16px;
+
+
+  background: #161827;
+}
+
+.card__img {
+  height: 196px;
+  width: 208px;
+  left: 32px;
+  top: 32px;
+  border-radius: 0px;
+  margin-bottom: 24px;
+}
+
+.card__imgProduct {
+  height: 196px;
+  width: 208px;
+  cursor: pointer;
+}
+
+.card__title {
+  width: 208px;
+  height: 42px;
+  
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+
+  cursor: pointer;
+  
+  color: #f1f2f9;
+}
+
+.card__price {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 8px 0;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.card__priceTeg {
+  width: 50px;
+  height: 31px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+ 
+  color: #f1f2f9;
+}
+
+.card__priceTegSale {
+  width: 50px;
+  height: 31px;
+  padding-left: 8px;
+
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 140%;
+ 
+  color: #75767f;
+}
+
+.card__middleLine {
+  width: 208px;
+  margin-bottom: 16px;
+  border: 1px solid #3B3E4A;
+}
+
+.card__params {
+  display: flex;
+  flex-direction: column;
+
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+
+  color: #75767f;
+}
+
+.card__paramsItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 8px;
+}
+
+.card__lastItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card__paramValue {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+
+  color: #f1f2f9;
+}
+
+.btns {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.card__btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: 160px;
+  height: 40px;
+
+  cursor: pointer;
+
+  background: #905BFF;
+}
+
+.card__btnFavourite {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  height: 40px;
+  width: 40px;
+  
+  border-radius: 0px;
+
+  background: #323542;
+}
+
+.card__likeIcon {
+  cursor: pointer;
+}
