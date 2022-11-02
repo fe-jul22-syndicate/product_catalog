@@ -1,0 +1,107 @@
+@use "../../styles/utils/mixins" as mixins;
+
+.logo {
+  position: relative;
+
+    &::after {
+      content: url("../../images/Logo.png");
+      position: absolute;
+      left: 50%;
+      top: -15px;
+    }
+
+    &__img {
+      height: 31px;
+    }
+}
+
+.footer {
+  border-top: 1px solid #3B3E4A;
+
+  &__section {
+    margin-top: 32px;
+
+    &:last-child {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__contacts {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+
+    @include mixins.onTable {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      line-height: 32px;
+    }
+    
+  }
+
+  &__list_item {
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include mixins.onTable {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__list_link {
+    color: #F1F2F9;
+    text-decoration: none;
+  }
+}
+
+.up {
+  display: flex;
+  justify-content: center;
+
+  @include mixins.onTable {
+    justify-content: flex-end;
+  }
+
+  &__text {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 32px;
+    text-align: right;
+    color: #75767F;
+    margin-right: 16px;
+  }
+
+  &__button {
+    width: 32px;
+    height: 32px;
+    background-color: #323542;
+    position: relative;
+
+    &:hover {
+      background-color: #4A4D58;
+    }
+
+    &::after {
+      content: url("../../images/Vector\ \(Stroke\).png");
+      margin: auto;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
