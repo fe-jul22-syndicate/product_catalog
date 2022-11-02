@@ -1,0 +1,20 @@
+{
+  "name": "product_catalog",
+  "version": "1.0.0",
+  "description": "- [DEMO LINK](https://fe-jul22-syndicate.github.io/product_catalog/)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fe-jul22-syndicate/product_catalog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fe-jul22-syndicate/product_catalog/issues"
+  },
+  "homepage": "https://github.com/fe-jul22-syndicate/product_catalog#readme"
+}
