@@ -1,12 +1,12 @@
 import React from 'react';
+import { Header } from './components/header/Header';
 import { CardMobile } from './components/cardMobile/CardMobile';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello world!</h1>
+      <Header />
       <CardMobile />
-      <h1>By World!</h1>
     </div>
   );
 }
