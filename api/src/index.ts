@@ -8,8 +8,10 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-  fs.readFile('./data/phones.json', 'utf-8', (err, data) => {
+app.use(express.static('./static'));
+
+app.get('/products', (req, res) => {
+  fs.readFile('./static/phones.json', 'utf-8', (err, data) => {
     if (err != null) {
       res.sendStatus(404);
     }
