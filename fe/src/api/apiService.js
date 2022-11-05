@@ -5,15 +5,22 @@ const URL = 'http://localhost:5000';
 
 // useEffect(() => {
 //   const getPhonesAsync = async () => {
-//     const receivedTodos = await getPhones(8, 4);
+//     const receivedTodos = await getPhones('year', 'desc', 8, 1);
 //     console.log('receivedTodos: ', receivedTodos);
 //   };
 //   getPhonesAsync();
 // }, []);
 
-export const getPhones = async (limit = 10, page = 1) => {
+export const getPhones = async (
+  sortBy = '',
+  order = 'asc',
+  limit = 10,
+  page = 1
+) => {
   const phonesResponse = await axios.get(`${URL}/products`, {
     params: {
+      sortBy,
+      order,
       limit,
       page,
     },
