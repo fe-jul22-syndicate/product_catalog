@@ -1,4 +1,4 @@
-import express from 'express';
+import express, {Request, Response} from 'express';
 import fs from 'fs';
 import cors from 'cors';
 import { Phone } from './types/Phone';
@@ -11,8 +11,11 @@ app.use(cors());
 
 app.use(express.static('./static'));
 
-app.get('/products', (req, res) => {
-  const {sortBy, order, limit, page} = req.query;
+app.get('/products', (req: Request, res: Response) => {
+  const sortBy: string = req.query.sortBy as string;
+  const order: string = req.query.order as string;
+  const limit: string = req.query.limit as string;
+  const page: string = req.query.page as string;
 
   fs.readFile('./static/phones.json', 'utf-8', (err, data) => {
     if (err) {
@@ -25,7 +28,7 @@ app.get('/products', (req, res) => {
     const sortedData : Phone[]
       = sortBy
         ? (JSON.parse(data))
-          .sort((currentPhone: Phone, nextPhone: Phone) => (
+          .sort((currentPhone: { [x: string]: number; }, nextPhone: { [x: string]: number; }) => (
             (currentPhone[sortBy] - nextPhone[sortBy]) * sortDirection
           ))
         : JSON.parse(data);
