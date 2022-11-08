@@ -1,4 +1,5 @@
 export interface Phone {
+  sortBy: any;
   id: number;
   category: string;
   phoneId: string;
